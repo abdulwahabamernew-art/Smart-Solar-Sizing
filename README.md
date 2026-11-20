@@ -1,5 +1,9 @@
 # Smart Solar Sizing
 
+![Concept illustration of solar sizing in a Yemen-inspired landscape](assets/solar-sizing-hero.jpg)
+
+*Concept illustration only; it is not a wiring diagram or a certified installation image.*
+
 **Development snapshot:** v3.2 — PV compatibility workspace
 **Status:** In development; not an installation approval or certified engineering design.
 
@@ -28,6 +32,10 @@ The project intentionally keeps assumptions and missing manufacturer data visibl
 - `outputs/` — inspectable sample JSON results used by the demos and documentation; these are not live customer quotations or verified installations.
 - `demo.py`, `run_inventory_demo.py`, and `run_compatibility_demo.py` — standalone demonstration entry points.
 
+![Project architecture diagram showing inputs, Python modules, outputs, and tests](docs/project-architecture.png)
+
+The editable diagram source is [`docs/project-architecture.mmd`](docs/project-architecture.mmd).
+
 ## Repository Structure
 
 ```text
@@ -54,6 +62,11 @@ Smart-Solar-Sizing/
 │   ├── commercial_draft_example.json
 │   ├── inventory_audit.json
 │   └── inventory_normalized.json
+├── assets/
+│   └── solar-sizing-hero.jpg
+├── docs/
+│   ├── project-architecture.mmd
+│   └── project-architecture.png
 ├── demo.py
 ├── run_inventory_demo.py
 ├── run_compatibility_demo.py

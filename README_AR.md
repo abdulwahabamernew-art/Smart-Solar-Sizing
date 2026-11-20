@@ -1,5 +1,9 @@
 # Smart Solar Sizing v3.2 — فحص توافق PV بالمصادر
 
+![رسم تصوري لمشروع تقدير الطاقة الشمسية](assets/solar-sizing-hero.jpg)
+
+> الصورة تصورية للتوضيح فقط؛ ليست مخطط توصيلات ولا صورة لتركيب معتمد.
+
 ## التشغيل
 
 ```bash
@@ -35,6 +39,12 @@ Python 3.9+؛ مكتبات قياسية فقط. في Colab استخدم `02_Comp
 - `outputs/compatibility_cases.json`: نتائج قابلة للفحص، دون تسعير مفترض للموديل الدقيق.
 - `tests/test_compatibility.py`: 12 اختبارًا جديدًا؛ المجموع 41 مع الاختبارات السابقة.
 - `README_v3_1_history.md`: تفاصيل المرحلة السابقة، محفوظة للسياق.
+
+## مخطط المعمارية
+
+![مخطط يوضح مدخلات المشروع ووحدات Python والنتائج والاختبارات](docs/project-architecture.png)
+
+مصدر المخطط القابل للتحرير: [`docs/project-architecture.mmd`](docs/project-architecture.mmd).
 
 ## الحدود
 

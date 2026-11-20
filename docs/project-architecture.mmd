@@ -1,0 +1,42 @@
+flowchart LR
+  subgraph Inputs[Inputs and source data]
+    LOAD[Arabic load request and site assumptions]
+    CONFIG[data/config.json]
+    LEGACY[data/legacy_inventory_0..2.json]
+    PROFILE[data/manufacturer_profiles.json]
+    PVCASE[PV array and site scenario]
+  end
+
+  subgraph Core[Python modules]
+    ENGINE[solar/engine.py<br/>Load and preliminary system sizing]
+    INVENTORY[solar/inventory.py<br/>Import, audit and commercial draft]
+    COMPAT[solar/compatibility.py<br/>PV and inverter screening]
+  end
+
+  subgraph Results[Outputs and checks]
+    SIZING[Preliminary energy, PV, battery and inverter results]
+    INVOUT[Normalized inventory, audit and draft JSON]
+    CASEOUT[Compatibility case JSON]
+    TESTS[41 unit tests<br/>engine / inventory / compatibility]
+  end
+
+  LOAD --> ENGINE
+  CONFIG --> ENGINE
+  ENGINE --> SIZING
+  LEGACY --> INVENTORY
+  CONFIG --> INVENTORY
+  ENGINE -->|sizing inputs for draft| INVENTORY
+  INVENTORY --> INVOUT
+  PROFILE --> COMPAT
+  PVCASE --> COMPAT
+  COMPAT --> CASEOUT
+  ENGINE -. tested by .-> TESTS
+  INVENTORY -. tested by .-> TESTS
+  COMPAT -. tested by .-> TESTS
+
+  classDef input fill:#e6f4f1,stroke:#238477,color:#123c38,stroke-width:1.5px
+  classDef core fill:#eaf0fb,stroke:#345d9d,color:#172744,stroke-width:1.5px
+  classDef output fill:#fff2d9,stroke:#bd7920,color:#4c3210,stroke-width:1.5px
+  class LOAD,CONFIG,LEGACY,PROFILE,PVCASE input
+  class ENGINE,INVENTORY,COMPAT core
+  class SIZING,INVOUT,CASEOUT,TESTS output
