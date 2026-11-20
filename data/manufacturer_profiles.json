@@ -1,0 +1,99 @@
+{
+  "inverters": [
+    {
+      "ac_nominal_v": 230,
+      "ac_phase": 1,
+      "battery_nominal_v": 48,
+      "continuous_w": 5000,
+      "max_altitude_m": null,
+      "max_ambient_c": 55,
+      "max_dc_v": 450,
+      "max_isc_a_per_mppt": null,
+      "max_operating_a_per_mppt": [
+        22
+      ],
+      "max_operating_a_per_string": 12,
+      "max_pv_input_power_w": 6000,
+      "max_strings_per_mppt": [
+        2
+      ],
+      "model": "SPF 5000 ES",
+      "mppt_count": 1,
+      "mppt_max_v": 430,
+      "mppt_min_v": 120,
+      "notes": [
+        "Independent Isc limit not shown in selected datasheet.",
+        "Do not import different revision values from older manuals."
+      ],
+      "profile_id": "Growatt-SPF5000ES-Datasheet-2509",
+      "source_page": 2,
+      "source_url": "https://en.growatt.com/upload/file/SPF_3500-5000%20ES_Datasheet-2509.pdf",
+      "startup_v": 150
+    },
+    {
+      "ac_nominal_choices_v": [
+        220,
+        230
+      ],
+      "ac_phase": 1,
+      "battery_max_v": 60,
+      "battery_min_v": 40,
+      "continuous_w": 8000,
+      "derating_starts_c": 45,
+      "max_altitude_m": 2000,
+      "max_ambient_c": 60,
+      "max_dc_v": 500,
+      "max_isc_a_per_mppt": [
+        34,
+        34
+      ],
+      "max_operating_a_per_mppt": [
+        26,
+        26
+      ],
+      "max_operating_a_per_string": null,
+      "max_pv_access_power_w": 16000,
+      "max_pv_input_power_w": 10400,
+      "max_strings_per_mppt": [
+        2,
+        2
+      ],
+      "model": "SUN-8K-SG01LP1-EU",
+      "mppt_count": 2,
+      "mppt_max_v": 425,
+      "mppt_min_v": 150,
+      "notes": [
+        "34A Isc per MPPT from this revision; do not substitute 44A from other revisions.",
+        "Per-string connector current not separately specified here; MPPT total is not divided by string count."
+      ],
+      "profile_id": "Deye-SUN8KSG01LP1EU-240802",
+      "source_page": 2,
+      "source_url": "https://www.deyeinverter.com/deyeinverter/2024/08/02/datasheet_sun-7.6-8k-sg01lp1-eu_240802_en.pdf",
+      "startup_v": 125
+    }
+  ],
+  "not_covered": [
+    "Battery/BMS compatibility",
+    "AC load and surge proof",
+    "Site data validation",
+    "Cable and protection design"
+  ],
+  "panel": {
+    "alpha_isc_per_c": 0.00045,
+    "beta_vmp_per_c": null,
+    "beta_vmp_status": "not_given_in_cited_datasheet",
+    "beta_voc_per_c": -0.0025,
+    "imp_a": 13.29,
+    "inventory_relation": "Jinko 585W family name only; exact suffix and revision unconfirmed",
+    "isc_a": 14.01,
+    "model": "JKM585N-72HL4-BDV",
+    "power_w": 585,
+    "profile_id": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+    "source_page": 2,
+    "source_url": "https://www.jinkosolar.com/uploads/JKM575-600N-72HL4-BDV-F9-EN.pdf",
+    "vmp_v": 44.02,
+    "voc_v": 52.7
+  },
+  "retrieved_on": "2026-11-10",
+  "status": "documented_reference_profiles_not_verified_physical_inventory"
+}

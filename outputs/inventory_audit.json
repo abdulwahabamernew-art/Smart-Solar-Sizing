@@ -1,0 +1,102 @@
+{
+  "total_records": 85,
+  "sources": [
+    {
+      "source_id": "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM",
+      "count": 23
+    },
+    {
+      "source_id": "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck",
+      "count": 26
+    },
+    {
+      "source_id": "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k",
+      "count": 36
+    }
+  ],
+  "engineering_eligible_records": 0,
+  "exact_model_conflicts": [
+    {
+      "model": "PV1800 ECO 1kW",
+      "differing_fields": [
+        "price_usd",
+        "stock_qty"
+      ],
+      "record_ids": [
+        "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM:INV-01",
+        "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck:INV-01",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:INV-R05"
+      ]
+    },
+    {
+      "model": "PV1800 VHM 2kW",
+      "differing_fields": [
+        "price_usd",
+        "stock_qty"
+      ],
+      "record_ids": [
+        "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM:INV-02",
+        "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck:INV-02",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:INV-R04"
+      ]
+    },
+    {
+      "model": "SPF 3000TL LVM 3kW",
+      "differing_fields": [
+        "stock_qty"
+      ],
+      "record_ids": [
+        "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM:INV-03",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:INV-R03"
+      ]
+    },
+    {
+      "model": "SPF 5000ES 5kW",
+      "differing_fields": [
+        "stock_qty"
+      ],
+      "record_ids": [
+        "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM:INV-04",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:INV-R01"
+      ]
+    },
+    {
+      "model": "SI23-D5-022G 22kW (30HP)",
+      "differing_fields": [
+        "price_usd",
+        "stock_qty"
+      ],
+      "record_ids": [
+        "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM:VFD-02",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:VFD-03"
+      ]
+    },
+    {
+      "model": "Hi-MO 6 Explorer 550W",
+      "differing_fields": [
+        "stock_qty",
+        "legacy_voltage_value"
+      ],
+      "record_ids": [
+        "1OGXytSJmY0-Buk7dOFPv_VomKYGF5xLb9JQ7UQH1-vM:PAN-02",
+        "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck:PAN-02",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:PAN-06"
+      ]
+    },
+    {
+      "model": "Vertex S 450W",
+      "differing_fields": [
+        "price_usd",
+        "stock_qty"
+      ],
+      "record_ids": [
+        "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck:PAN-01",
+        "1E7tQWcrnCDD2y_UqYazds5Kh3neqaeFL4-DoQqvvK9k:PAN-07"
+      ]
+    }
+  ],
+  "notes": [
+    "No cross-source stock addition or automatic deduplication.",
+    "Non-exact model aliases are not resolved; conflict list is not exhaustive."
+  ]
+}

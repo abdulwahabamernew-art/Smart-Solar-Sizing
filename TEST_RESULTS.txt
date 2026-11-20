@@ -1,0 +1,46 @@
+test_assumed_coefficient_remains_conditional (test_compatibility.CompatibilityTests.test_assumed_coefficient_remains_conditional) ... ok
+test_datasheet_revisions_remain_distinct (test_compatibility.CompatibilityTests.test_datasheet_revisions_remain_distinct) ... ok
+test_derating_is_pending (test_compatibility.CompatibilityTests.test_derating_is_pending) ... ok
+test_enumeration_selects_ten_panels_on_separate_mppts (test_compatibility.CompatibilityTests.test_enumeration_selects_ten_panels_on_separate_mppts) ... ok
+test_growatt_per_string_constraint (test_compatibility.CompatibilityTests.test_growatt_per_string_constraint) ... ok
+test_hot_environment_rejects (test_compatibility.CompatibilityTests.test_hot_environment_rejects) ... ok
+test_invalid_conditions (test_compatibility.CompatibilityTests.test_invalid_conditions) ... ok
+test_missing_vmp_never_fabricated (test_compatibility.CompatibilityTests.test_missing_vmp_never_fabricated) ... ok
+test_no_growatt_candidates (test_compatibility.CompatibilityTests.test_no_growatt_candidates) ... ok
+test_site_altitude_rejects (test_compatibility.CompatibilityTests.test_site_altitude_rejects) ... ok
+test_two_mppt_not_two_parallel_on_one (test_compatibility.CompatibilityTests.test_two_mppt_not_two_parallel_on_one) ... ok
+test_voltage_limit_and_energy_reject (test_compatibility.CompatibilityTests.test_voltage_limit_and_energy_reject) ... ok
+test_array_never_undersizes (test_engine.EngineTests.test_array_never_undersizes) ... ok
+test_array_rejects_infeasible (test_engine.EngineTests.test_array_rejects_infeasible) ... ok
+test_distinct_longest_alias (test_engine.EngineTests.test_distinct_longest_alias) ... ok
+test_duals_and_arabic_digits (test_engine.EngineTests.test_duals_and_arabic_digits) ... ok
+test_energy_and_battery (test_engine.EngineTests.test_energy_and_battery) ... ok
+test_existing_pump_hours (test_engine.EngineTests.test_existing_pump_hours) ... ok
+test_hard_capacity_and_ac_dc_separation (test_engine.EngineTests.test_hard_capacity_and_ac_dc_separation) ... ok
+test_industrial_start_includes_other_loads (test_engine.EngineTests.test_industrial_start_includes_other_loads) ... ok
+test_invalid_inputs (test_engine.EngineTests.test_invalid_inputs) ... ok
+test_kw_override (test_engine.EngineTests.test_kw_override) ... ok
+test_missing_surge_rejects (test_engine.EngineTests.test_missing_surge_rejects) ... ok
+test_no_implicit_full_day_battery (test_engine.EngineTests.test_no_implicit_full_day_battery) ... ok
+test_units_not_quantity (test_engine.EngineTests.test_units_not_quantity) ... ok
+test_unknown_is_reported (test_engine.EngineTests.test_unknown_is_reported) ... ok
+test_unlabelled_number_requires_review (test_engine.EngineTests.test_unlabelled_number_requires_review) ... ok
+test_unverified_inventory_rejected (test_engine.EngineTests.test_unverified_inventory_rejected) ... ok
+test_well_energy_and_hours (test_engine.EngineTests.test_well_energy_and_hours) ... ok
+test_all_sources_without_totals (test_inventory.InventoryTests.test_all_sources_without_totals) ... ok
+test_audit_conflicts_no_stock_sum (test_inventory.InventoryTests.test_audit_conflicts_no_stock_sum) ... ok
+test_battery_dod_and_nominal_bus (test_inventory.InventoryTests.test_battery_dod_and_nominal_bus) ... ok
+test_battery_is_wh_not_w (test_inventory.InventoryTests.test_battery_is_wh_not_w) ... ok
+test_currency_rounding (test_inventory.InventoryTests.test_currency_rounding) ... ok
+test_draft_one_source_and_stock_capacity (test_inventory.InventoryTests.test_draft_one_source_and_stock_capacity) ... ok
+test_exchange_rates_explicit (test_inventory.InventoryTests.test_exchange_rates_explicit) ... ok
+test_invalid_request (test_inventory.InventoryTests.test_invalid_request) ... ok
+test_no_guessed_ac_or_battery_range (test_inventory.InventoryTests.test_no_guessed_ac_or_battery_range) ... ok
+test_no_implicit_parallel_inverters (test_inventory.InventoryTests.test_no_implicit_parallel_inverters) ... ok
+test_panel_vmp_from_correct_column (test_inventory.InventoryTests.test_panel_vmp_from_correct_column) ... ok
+test_raw_fields_and_source_retained (test_inventory.InventoryTests.test_raw_fields_and_source_retained) ... ok
+
+----------------------------------------------------------------------
+Ran 41 tests in 0.006s
+
+OK

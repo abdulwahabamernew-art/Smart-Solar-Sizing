@@ -1,0 +1,71 @@
+{
+  "input_status": "demonstration_defaults_only",
+  "message": "ثلاجتين و ٣ شاشات و ١٠ لمبات و مكيفين",
+  "sizing": {
+    "daily_energy_wh": 24660,
+    "running_w": 2970,
+    "preliminary_starting_va": 4770.0,
+    "minimum_continuous_inverter_w": 3712.5,
+    "required_pv_w": 5303.225806451613,
+    "battery_nominal_wh": null,
+    "assumptions": [
+      "All loads concurrent; unity PF for preliminary starting estimate.",
+      "One motor starts at a time; validate actual VA and surge duration.",
+      "PV calculation is a daily energy balance, not hourly dispatch."
+    ]
+  },
+  "draft": {
+    "status": "commercial_draft_not_engineering_design",
+    "is_final": false,
+    "source_id": "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck",
+    "lines": [
+      {
+        "record_id": "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck:PAN-01",
+        "model": "Vertex S 450W",
+        "category": "panel",
+        "quantity": 12,
+        "unit_price_usd": "85.00",
+        "subtotal_usd": "1020.00",
+        "assumption": "Energy-only lower-bound quantity; string engineering pending.",
+        "verification_status": "unverified",
+        "issues": [
+          "manufacturer_ratings_unverified",
+          "price_and_stock_not_live",
+          "panel_currents_missing",
+          "temperature_coefficients_missing"
+        ]
+      },
+      {
+        "record_id": "1i31mVTp9v0BaVhZSX5EKKgEdReeDKN3VnmQIEoGF4ck:INV-04",
+        "model": "SPF 5000 ES",
+        "category": "inverter",
+        "quantity": 1,
+        "unit_price_usd": "560.00",
+        "subtotal_usd": "560.00",
+        "assumption": "Capacity and declared phase only; AC/DC/PV and surge compatibility pending.",
+        "verification_status": "unverified",
+        "issues": [
+          "manufacturer_ratings_unverified",
+          "price_and_stock_not_live",
+          "ac_voltage_unverified",
+          "battery_voltage_range_unverified",
+          "surge_ratings_missing",
+          "pv_current_limits_missing"
+        ]
+      }
+    ],
+    "blocked_items": [],
+    "listed_items_subtotal_usd": "1580.00",
+    "converted_subtotals": {},
+    "exchange_rate_units": "target currency units per 1 USD",
+    "exchange_rates": {},
+    "fx_as_of": null,
+    "missing_scope": [
+      "String-based final panel count",
+      "Cable sizing and quantities",
+      "Protection, earthing, mounting, labor, transport and taxes",
+      "Verified electrical and battery compatibility"
+    ],
+    "note": "This may combine electrically incompatible items. Do not issue as a final customer quotation."
+  }
+}

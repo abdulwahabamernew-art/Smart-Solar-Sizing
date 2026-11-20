@@ -1,0 +1,1276 @@
+{
+  "conditions": {
+    "min_cell_c": 0,
+    "max_cell_c": 70,
+    "site_altitude_m": 1000,
+    "site_max_ambient_c": 40,
+    "bifacial_current_gain": 0.1
+  },
+  "required_pv_w": 5303.225806451613,
+  "cases": {
+    "growatt_single_string": {
+      "status": "rejected",
+      "installation_approved": false,
+      "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+      "inverter_profile": "Growatt-SPF5000ES-Datasheet-2509",
+      "series": 7,
+      "strings_by_mppt": [
+        1
+      ],
+      "panels": 7,
+      "array_stc_w": 4095,
+      "checks": [
+        {
+          "check": "energy_capacity",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 4095,
+            "required_w": 4000
+          }
+        },
+        {
+          "check": "pv_input_power",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 4095,
+            "limit_w": 6000
+          }
+        },
+        {
+          "check": "max_dc_voltage",
+          "state": "pass",
+          "detail": {
+            "string_voc_max_v": 391.95625000000007,
+            "exclusive_limit_v": 450
+          }
+        },
+        {
+          "check": "thermal_mppt",
+          "state": "pending",
+          "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+        },
+        {
+          "check": "startup_screen",
+          "state": "pending",
+          "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+        },
+        {
+          "check": "current_model",
+          "state": "assumed_pass",
+          "detail": {
+            "imp_model": "Imp scaled with alpha Isc proxy",
+            "irradiance_factor_applied_to": "Isc",
+            "irradiance_factor": 1.25,
+            "bifacial_current_gain": 0.1,
+            "note": "Scenario assumption; not a universal code factor or validated site maximum."
+          }
+        },
+        {
+          "check": "mppt_1_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_1_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 22
+          }
+        },
+        {
+          "check": "mppt_1_per_string_current",
+          "state": "fail",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 12
+          }
+        },
+        {
+          "check": "mppt_1_short_circuit_current",
+          "state": "pending",
+          "detail": "Independent PV short-circuit limit not established in selected document."
+        },
+        {
+          "check": "physical_revision_match",
+          "state": "pending",
+          "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+        },
+        {
+          "check": "site_altitude",
+          "state": "pending",
+          "detail": "Site altitude not supplied."
+        },
+        {
+          "check": "ambient_derating",
+          "state": "pass",
+          "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+        }
+      ],
+      "failed_checks": [
+        "mppt_1_per_string_current"
+      ],
+      "string_vmp_range_v": null,
+      "excluded_scope": [
+        "Battery/BMS",
+        "AC load and surge validation",
+        "Cable/protection/earthing",
+        "Site irradiance extremes",
+        "Minimum ambient temperature and ventilation",
+        "Structural design"
+      ]
+    },
+    "growatt_original_load": {
+      "status": "no_candidates_under_selected_limits",
+      "candidates": [],
+      "rejected_candidate_count": 4,
+      "installation_approved": false
+    },
+    "deye_5s_2mppt_evidence_only": {
+      "status": "conditional",
+      "installation_approved": false,
+      "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+      "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+      "series": 5,
+      "strings_by_mppt": [
+        1,
+        1
+      ],
+      "panels": 10,
+      "array_stc_w": 5850,
+      "checks": [
+        {
+          "check": "energy_capacity",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "required_w": 5303.225806451613
+          }
+        },
+        {
+          "check": "pv_input_power",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "limit_w": 10400
+          }
+        },
+        {
+          "check": "max_dc_voltage",
+          "state": "pass",
+          "detail": {
+            "string_voc_max_v": 279.96875,
+            "exclusive_limit_v": 500
+          }
+        },
+        {
+          "check": "pv_access_power",
+          "state": "pass",
+          "detail": {
+            "limit_w": 16000
+          }
+        },
+        {
+          "check": "thermal_mppt",
+          "state": "pending",
+          "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+        },
+        {
+          "check": "startup_screen",
+          "state": "pending",
+          "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+        },
+        {
+          "check": "current_model",
+          "state": "assumed_pass",
+          "detail": {
+            "imp_model": "Imp scaled with alpha Isc proxy",
+            "irradiance_factor_applied_to": "Isc",
+            "irradiance_factor": 1.25,
+            "bifacial_current_gain": 0.1,
+            "note": "Scenario assumption; not a universal code factor or validated site maximum."
+          }
+        },
+        {
+          "check": "mppt_1_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_1_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_1_short_circuit_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 19.653840937500004,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "mppt_2_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_2_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_2_short_circuit_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 19.653840937500004,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "physical_revision_match",
+          "state": "pending",
+          "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+        },
+        {
+          "check": "site_altitude",
+          "state": "pass",
+          "detail": {
+            "site_m": 1000,
+            "limit_m": 2000
+          }
+        },
+        {
+          "check": "ambient_derating",
+          "state": "pass",
+          "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+        }
+      ],
+      "failed_checks": [],
+      "string_vmp_range_v": null,
+      "excluded_scope": [
+        "Battery/BMS",
+        "AC load and surge validation",
+        "Cable/protection/earthing",
+        "Site irradiance extremes",
+        "Minimum ambient temperature and ventilation",
+        "Structural design"
+      ]
+    },
+    "deye_5s_2mppt_assumption_scenario": {
+      "status": "conditional",
+      "installation_approved": false,
+      "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+      "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+      "series": 5,
+      "strings_by_mppt": [
+        1,
+        1
+      ],
+      "panels": 10,
+      "array_stc_w": 5850,
+      "checks": [
+        {
+          "check": "energy_capacity",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "required_w": 5303.225806451613
+          }
+        },
+        {
+          "check": "pv_input_power",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "limit_w": 10400
+          }
+        },
+        {
+          "check": "max_dc_voltage",
+          "state": "pass",
+          "detail": {
+            "string_voc_max_v": 279.96875,
+            "exclusive_limit_v": 500
+          }
+        },
+        {
+          "check": "pv_access_power",
+          "state": "pass",
+          "detail": {
+            "limit_w": 16000
+          }
+        },
+        {
+          "check": "thermal_mppt",
+          "state": "assumed_pass",
+          "detail": {
+            "string_vmp_min_v": 190.3865,
+            "string_vmp_max_v": 236.60750000000002,
+            "beta_vmp": -0.003,
+            "manufacturer_coefficient": false
+          }
+        },
+        {
+          "check": "startup_screen",
+          "state": "assumed_pass",
+          "detail": {
+            "required_v": 125,
+            "note": "Voltage screening only, not low-irradiance startup simulation."
+          }
+        },
+        {
+          "check": "current_model",
+          "state": "assumed_pass",
+          "detail": {
+            "imp_model": "Imp scaled with alpha Isc proxy",
+            "irradiance_factor_applied_to": "Isc",
+            "irradiance_factor": 1.25,
+            "bifacial_current_gain": 0.1,
+            "note": "Scenario assumption; not a universal code factor or validated site maximum."
+          }
+        },
+        {
+          "check": "mppt_1_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_1_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_1_short_circuit_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 19.653840937500004,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "mppt_2_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_2_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_2_short_circuit_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 19.653840937500004,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "physical_revision_match",
+          "state": "pending",
+          "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+        },
+        {
+          "check": "site_altitude",
+          "state": "pass",
+          "detail": {
+            "site_m": 1000,
+            "limit_m": 2000
+          }
+        },
+        {
+          "check": "ambient_derating",
+          "state": "pass",
+          "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+        }
+      ],
+      "failed_checks": [],
+      "string_vmp_range_v": [
+        190.3865,
+        236.60750000000002
+      ],
+      "excluded_scope": [
+        "Battery/BMS",
+        "AC load and surge validation",
+        "Cable/protection/earthing",
+        "Site irradiance extremes",
+        "Minimum ambient temperature and ventilation",
+        "Structural design"
+      ]
+    },
+    "deye_5s_2strings_same_mppt": {
+      "status": "rejected",
+      "installation_approved": false,
+      "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+      "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+      "series": 5,
+      "strings_by_mppt": [
+        2,
+        0
+      ],
+      "panels": 10,
+      "array_stc_w": 5850,
+      "checks": [
+        {
+          "check": "energy_capacity",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "required_w": 5303.225806451613
+          }
+        },
+        {
+          "check": "pv_input_power",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "limit_w": 10400
+          }
+        },
+        {
+          "check": "max_dc_voltage",
+          "state": "pass",
+          "detail": {
+            "string_voc_max_v": 279.96875,
+            "exclusive_limit_v": 500
+          }
+        },
+        {
+          "check": "pv_access_power",
+          "state": "pass",
+          "detail": {
+            "limit_w": 16000
+          }
+        },
+        {
+          "check": "thermal_mppt",
+          "state": "pending",
+          "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+        },
+        {
+          "check": "startup_screen",
+          "state": "pending",
+          "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+        },
+        {
+          "check": "current_model",
+          "state": "assumed_pass",
+          "detail": {
+            "imp_model": "Imp scaled with alpha Isc proxy",
+            "irradiance_factor_applied_to": "Isc",
+            "irradiance_factor": 1.25,
+            "bifacial_current_gain": 0.1,
+            "note": "Scenario assumption; not a universal code factor or validated site maximum."
+          }
+        },
+        {
+          "check": "mppt_1_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 2,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_1_operating_current",
+          "state": "fail",
+          "detail": {
+            "screen_a": 29.8300695,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_1_short_circuit_current",
+          "state": "fail",
+          "detail": {
+            "screen_a": 39.30768187500001,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "physical_revision_match",
+          "state": "pending",
+          "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+        },
+        {
+          "check": "site_altitude",
+          "state": "pass",
+          "detail": {
+            "site_m": 1000,
+            "limit_m": 2000
+          }
+        },
+        {
+          "check": "ambient_derating",
+          "state": "pass",
+          "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+        }
+      ],
+      "failed_checks": [
+        "mppt_1_operating_current",
+        "mppt_1_short_circuit_current"
+      ],
+      "string_vmp_range_v": null,
+      "excluded_scope": [
+        "Battery/BMS",
+        "AC load and surge validation",
+        "Cable/protection/earthing",
+        "Site irradiance extremes",
+        "Minimum ambient temperature and ventilation",
+        "Structural design"
+      ]
+    },
+    "deye_altitude_2300m": {
+      "status": "rejected",
+      "installation_approved": false,
+      "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+      "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+      "series": 5,
+      "strings_by_mppt": [
+        1,
+        1
+      ],
+      "panels": 10,
+      "array_stc_w": 5850,
+      "checks": [
+        {
+          "check": "energy_capacity",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "required_w": 5303.225806451613
+          }
+        },
+        {
+          "check": "pv_input_power",
+          "state": "pass",
+          "detail": {
+            "array_stc_w": 5850,
+            "limit_w": 10400
+          }
+        },
+        {
+          "check": "max_dc_voltage",
+          "state": "pass",
+          "detail": {
+            "string_voc_max_v": 279.96875,
+            "exclusive_limit_v": 500
+          }
+        },
+        {
+          "check": "pv_access_power",
+          "state": "pass",
+          "detail": {
+            "limit_w": 16000
+          }
+        },
+        {
+          "check": "thermal_mppt",
+          "state": "pending",
+          "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+        },
+        {
+          "check": "startup_screen",
+          "state": "pending",
+          "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+        },
+        {
+          "check": "current_model",
+          "state": "assumed_pass",
+          "detail": {
+            "imp_model": "Imp scaled with alpha Isc proxy",
+            "irradiance_factor_applied_to": "Isc",
+            "irradiance_factor": 1.25,
+            "bifacial_current_gain": 0.1,
+            "note": "Scenario assumption; not a universal code factor or validated site maximum."
+          }
+        },
+        {
+          "check": "mppt_1_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_1_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_1_short_circuit_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 19.653840937500004,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "mppt_2_string_count",
+          "state": "pass",
+          "detail": {
+            "strings": 1,
+            "limit": 2
+          }
+        },
+        {
+          "check": "mppt_2_operating_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 14.91503475,
+            "limit_a": 26
+          }
+        },
+        {
+          "check": "mppt_2_short_circuit_current",
+          "state": "pass",
+          "detail": {
+            "screen_a": 19.653840937500004,
+            "limit_a": 34
+          }
+        },
+        {
+          "check": "physical_revision_match",
+          "state": "pending",
+          "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+        },
+        {
+          "check": "site_altitude",
+          "state": "fail",
+          "detail": {
+            "site_m": 2300,
+            "limit_m": 2000
+          }
+        },
+        {
+          "check": "ambient_derating",
+          "state": "pass",
+          "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+        }
+      ],
+      "failed_checks": [
+        "site_altitude"
+      ],
+      "string_vmp_range_v": null,
+      "excluded_scope": [
+        "Battery/BMS",
+        "AC load and surge validation",
+        "Cable/protection/earthing",
+        "Site irradiance extremes",
+        "Minimum ambient temperature and ventilation",
+        "Structural design"
+      ]
+    },
+    "deye_candidates": {
+      "status": "conditional_candidates",
+      "candidates": [
+        {
+          "status": "conditional",
+          "installation_approved": false,
+          "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+          "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+          "series": 5,
+          "strings_by_mppt": [
+            1,
+            1
+          ],
+          "panels": 10,
+          "array_stc_w": 5850,
+          "checks": [
+            {
+              "check": "energy_capacity",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 5850,
+                "required_w": 5303.225806451613
+              }
+            },
+            {
+              "check": "pv_input_power",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 5850,
+                "limit_w": 10400
+              }
+            },
+            {
+              "check": "max_dc_voltage",
+              "state": "pass",
+              "detail": {
+                "string_voc_max_v": 279.96875,
+                "exclusive_limit_v": 500
+              }
+            },
+            {
+              "check": "pv_access_power",
+              "state": "pass",
+              "detail": {
+                "limit_w": 16000
+              }
+            },
+            {
+              "check": "thermal_mppt",
+              "state": "pending",
+              "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+            },
+            {
+              "check": "startup_screen",
+              "state": "pending",
+              "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+            },
+            {
+              "check": "current_model",
+              "state": "assumed_pass",
+              "detail": {
+                "imp_model": "Imp scaled with alpha Isc proxy",
+                "irradiance_factor_applied_to": "Isc",
+                "irradiance_factor": 1.25,
+                "bifacial_current_gain": 0.1,
+                "note": "Scenario assumption; not a universal code factor or validated site maximum."
+              }
+            },
+            {
+              "check": "mppt_1_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_1_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_1_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "mppt_2_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_2_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_2_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "physical_revision_match",
+              "state": "pending",
+              "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+            },
+            {
+              "check": "site_altitude",
+              "state": "pass",
+              "detail": {
+                "site_m": 1000,
+                "limit_m": 2000
+              }
+            },
+            {
+              "check": "ambient_derating",
+              "state": "pass",
+              "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+            }
+          ],
+          "failed_checks": [],
+          "string_vmp_range_v": null,
+          "excluded_scope": [
+            "Battery/BMS",
+            "AC load and surge validation",
+            "Cable/protection/earthing",
+            "Site irradiance extremes",
+            "Minimum ambient temperature and ventilation",
+            "Structural design"
+          ]
+        },
+        {
+          "status": "conditional",
+          "installation_approved": false,
+          "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+          "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+          "series": 6,
+          "strings_by_mppt": [
+            1,
+            1
+          ],
+          "panels": 12,
+          "array_stc_w": 7020,
+          "checks": [
+            {
+              "check": "energy_capacity",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 7020,
+                "required_w": 5303.225806451613
+              }
+            },
+            {
+              "check": "pv_input_power",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 7020,
+                "limit_w": 10400
+              }
+            },
+            {
+              "check": "max_dc_voltage",
+              "state": "pass",
+              "detail": {
+                "string_voc_max_v": 335.96250000000003,
+                "exclusive_limit_v": 500
+              }
+            },
+            {
+              "check": "pv_access_power",
+              "state": "pass",
+              "detail": {
+                "limit_w": 16000
+              }
+            },
+            {
+              "check": "thermal_mppt",
+              "state": "pending",
+              "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+            },
+            {
+              "check": "startup_screen",
+              "state": "pending",
+              "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+            },
+            {
+              "check": "current_model",
+              "state": "assumed_pass",
+              "detail": {
+                "imp_model": "Imp scaled with alpha Isc proxy",
+                "irradiance_factor_applied_to": "Isc",
+                "irradiance_factor": 1.25,
+                "bifacial_current_gain": 0.1,
+                "note": "Scenario assumption; not a universal code factor or validated site maximum."
+              }
+            },
+            {
+              "check": "mppt_1_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_1_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_1_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "mppt_2_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_2_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_2_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "physical_revision_match",
+              "state": "pending",
+              "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+            },
+            {
+              "check": "site_altitude",
+              "state": "pass",
+              "detail": {
+                "site_m": 1000,
+                "limit_m": 2000
+              }
+            },
+            {
+              "check": "ambient_derating",
+              "state": "pass",
+              "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+            }
+          ],
+          "failed_checks": [],
+          "string_vmp_range_v": null,
+          "excluded_scope": [
+            "Battery/BMS",
+            "AC load and surge validation",
+            "Cable/protection/earthing",
+            "Site irradiance extremes",
+            "Minimum ambient temperature and ventilation",
+            "Structural design"
+          ]
+        },
+        {
+          "status": "conditional",
+          "installation_approved": false,
+          "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+          "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+          "series": 7,
+          "strings_by_mppt": [
+            1,
+            1
+          ],
+          "panels": 14,
+          "array_stc_w": 8190,
+          "checks": [
+            {
+              "check": "energy_capacity",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 8190,
+                "required_w": 5303.225806451613
+              }
+            },
+            {
+              "check": "pv_input_power",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 8190,
+                "limit_w": 10400
+              }
+            },
+            {
+              "check": "max_dc_voltage",
+              "state": "pass",
+              "detail": {
+                "string_voc_max_v": 391.95625000000007,
+                "exclusive_limit_v": 500
+              }
+            },
+            {
+              "check": "pv_access_power",
+              "state": "pass",
+              "detail": {
+                "limit_w": 16000
+              }
+            },
+            {
+              "check": "thermal_mppt",
+              "state": "pending",
+              "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+            },
+            {
+              "check": "startup_screen",
+              "state": "pending",
+              "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+            },
+            {
+              "check": "current_model",
+              "state": "assumed_pass",
+              "detail": {
+                "imp_model": "Imp scaled with alpha Isc proxy",
+                "irradiance_factor_applied_to": "Isc",
+                "irradiance_factor": 1.25,
+                "bifacial_current_gain": 0.1,
+                "note": "Scenario assumption; not a universal code factor or validated site maximum."
+              }
+            },
+            {
+              "check": "mppt_1_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_1_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_1_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "mppt_2_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_2_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_2_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "physical_revision_match",
+              "state": "pending",
+              "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+            },
+            {
+              "check": "site_altitude",
+              "state": "pass",
+              "detail": {
+                "site_m": 1000,
+                "limit_m": 2000
+              }
+            },
+            {
+              "check": "ambient_derating",
+              "state": "pass",
+              "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+            }
+          ],
+          "failed_checks": [],
+          "string_vmp_range_v": null,
+          "excluded_scope": [
+            "Battery/BMS",
+            "AC load and surge validation",
+            "Cable/protection/earthing",
+            "Site irradiance extremes",
+            "Minimum ambient temperature and ventilation",
+            "Structural design"
+          ]
+        },
+        {
+          "status": "conditional",
+          "installation_approved": false,
+          "panel_profile": "Jinko-JKM585N-72HL4-BDV-F9-EN",
+          "inverter_profile": "Deye-SUN8KSG01LP1EU-240802",
+          "series": 8,
+          "strings_by_mppt": [
+            1,
+            1
+          ],
+          "panels": 16,
+          "array_stc_w": 9360,
+          "checks": [
+            {
+              "check": "energy_capacity",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 9360,
+                "required_w": 5303.225806451613
+              }
+            },
+            {
+              "check": "pv_input_power",
+              "state": "pass",
+              "detail": {
+                "array_stc_w": 9360,
+                "limit_w": 10400
+              }
+            },
+            {
+              "check": "max_dc_voltage",
+              "state": "pass",
+              "detail": {
+                "string_voc_max_v": 447.95000000000005,
+                "exclusive_limit_v": 500
+              }
+            },
+            {
+              "check": "pv_access_power",
+              "state": "pass",
+              "detail": {
+                "limit_w": 16000
+              }
+            },
+            {
+              "check": "thermal_mppt",
+              "state": "pending",
+              "detail": "Manufacturer beta Vmp not present in cited datasheet; no substitution from beta Voc or gamma Pmax."
+            },
+            {
+              "check": "startup_screen",
+              "state": "pending",
+              "detail": "Temperature-corrected operating voltage unavailable; actual low-light startup also unmodeled."
+            },
+            {
+              "check": "current_model",
+              "state": "assumed_pass",
+              "detail": {
+                "imp_model": "Imp scaled with alpha Isc proxy",
+                "irradiance_factor_applied_to": "Isc",
+                "irradiance_factor": 1.25,
+                "bifacial_current_gain": 0.1,
+                "note": "Scenario assumption; not a universal code factor or validated site maximum."
+              }
+            },
+            {
+              "check": "mppt_1_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_1_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_1_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "mppt_2_string_count",
+              "state": "pass",
+              "detail": {
+                "strings": 1,
+                "limit": 2
+              }
+            },
+            {
+              "check": "mppt_2_operating_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 14.91503475,
+                "limit_a": 26
+              }
+            },
+            {
+              "check": "mppt_2_short_circuit_current",
+              "state": "pass",
+              "detail": {
+                "screen_a": 19.653840937500004,
+                "limit_a": 34
+              }
+            },
+            {
+              "check": "physical_revision_match",
+              "state": "pending",
+              "detail": "Legacy inventory names do not prove exact model suffix, hardware revision or matching datasheet."
+            },
+            {
+              "check": "site_altitude",
+              "state": "pass",
+              "detail": {
+                "site_m": 1000,
+                "limit_m": 2000
+              }
+            },
+            {
+              "check": "ambient_derating",
+              "state": "pass",
+              "detail": "Below documented upper-temperature/derating threshold; ventilation and minimum temperature not evaluated."
+            }
+          ],
+          "failed_checks": [],
+          "string_vmp_range_v": null,
+          "excluded_scope": [
+            "Battery/BMS",
+            "AC load and surge validation",
+            "Cable/protection/earthing",
+            "Site irradiance extremes",
+            "Minimum ambient temperature and ventilation",
+            "Structural design"
+          ]
+        }
+      ],
+      "rejected_candidate_count": 24,
+      "installation_approved": false
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "properties": {
+    "ac_phase": {
+      "enum": [
+        1,
+        3
+      ]
+    },
+    "ac_voltage_v": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "battery_max_v": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "battery_min_v": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "category": {
+      "const": "inverter"
+    },
+    "continuous_w": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "datasheet_source": {
+      "type": "string"
+    },
+    "id": {
+      "type": "string"
+    },
+    "price_usd": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "stock_qty": {
+      "minimum": 0,
+      "type": "integer"
+    },
+    "surge_seconds": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "surge_va": {
+      "exclusiveMinimum": 0,
+      "type": "number"
+    },
+    "verification_status": {
+      "enum": [
+        "unverified",
+        "verified"
+      ]
+    }
+  },
+  "required": [
+    "id",
+    "category",
+    "continuous_w",
+    "ac_phase",
+    "ac_voltage_v",
+    "price_usd",
+    "stock_qty",
+    "verification_status"
+  ],
+  "title": "Verified inverter record; PV input ratings verified separately",
+  "type": "object"
+}
